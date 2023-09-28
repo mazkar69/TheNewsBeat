@@ -12,6 +12,9 @@ require('./config/db');
 app.use(express.json());
 app.use(express.urlencoded());
 
+//Setting the middleware for porxy
+app.set('trust proxy', true);
+
 // post at which Server is running.
 const port = process.env.PORT || 5000;
 
